@@ -28,7 +28,7 @@ function validateInput(testInput) {
     }
 }
 
-function formSubmission(document, list, pilot, copilot, fuelLevel, cargoLevel) {
+function formSubmission(document, list, pilfinot, copilot, fuelLevel, cargoLevel) {
     //let fuel = document.getElementByID("fuelStatus");
     if (validateInput(pilot) === "Empty") {
         alert("All fields are required!");
