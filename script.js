@@ -5,7 +5,7 @@
 // const { myFetch, formSubmission } = require("./scriptHelper");
 
 window.addEventListener("load", function() {
-    console.log("ran");
+    //console.log("ran");
    let listedPlanets;
    // Set listedPlanetsResponse equal to the value returned by calling myFetch()
    let listedPlanetsResponse = myFetch();
@@ -19,6 +19,9 @@ window.addEventListener("load", function() {
        addDestinationInfo(document, planet.name, planet.diameter, planet.star, planet.distance, planet.moons, planet.image);
    })
 
+   let list = document.getElementById("faultyItems");
+   list.style.visibility = "hidden";
+
    let form = document.querySelector("form");
    form.addEventListener("submit", function(event) {
     event.preventDefault();
@@ -30,11 +33,10 @@ window.addEventListener("load", function() {
     let fuelLevel = fuelLevelInput.value;
     let cargoMassInput = document.querySelector("input[name=cargoMass]");
     let cargoMass = cargoMassInput.value;
-    let list = document.getElementById("faultyItems");
 
-    console.log("ran2");
+    //console.log("ran2");
     formSubmission(document, list, pilot, copilot, fuelLevel, cargoMass);
-    console.log("ran3");
+    //console.log("ran3");
    });
    
 });
